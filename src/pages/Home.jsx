@@ -88,7 +88,7 @@ const Home = () => {
   return (
     <div className="pt-[2rem]">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-50 to-blue-50 ">
+      <section className="relative min-h-screen py-[3rem] flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-50 to-blue-50 ">
         {/* Clean Professional Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-white via-slate-50 to-blue-50">
           <div className="absolute inset-0 bg-gradient-to-t from-blue-50/50 via-transparent to-transparent"></div>
@@ -252,7 +252,7 @@ const Home = () => {
 
                 {/* Floating Elements */}
                 <FloatingElement duration={6} amplitude={15}>
-                  <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-2xl flex items-center justify-center shadow-2xl border-4 border-white">
+                  <div className="absolute -bottom-4 -right-4 w-20 h-20 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-2xl flex items-center justify-center shadow-2xl border-4 border-white">
                     <Star className="w-8 h-8 text-white" />
                   </div>
                 </FloatingElement>
