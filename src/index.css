@@ -1,0 +1,65 @@
+
+/* Demo class to smoothly animate background color between a root color and its lighter version */
+@keyframes bgRootPulse {
+  0% {
+    background: var(--color-blue-50);
+  }
+  25% {
+    background: var(--color-emerald-50);
+  }
+  50% {
+    background: var(--color-indigo-50);
+  }
+  75% {
+    background: var(--color-slate-50);
+  }
+  100% {
+    background: var(--color-blue-50);
+  }
+}
+
+.animate-root-colors {
+  animation: bgRootPulse 15s infinite linear;
+}
+@import "tailwindcss";
+
+:root {
+  /* Tailwind palette approximations */
+  --color-slate-50: #f8fafc;
+  --color-slate-100: #f1f5f9;
+  --color-slate-200: #e2e8f0;
+  --color-slate-300: #cbd5e1;
+  --color-slate-500: #64748b;
+  --color-slate-600: #475569;
+  --color-slate-700: #334155;
+  --color-slate-800: #1e293b;
+  --color-slate-900: #0f172a;
+  --color-blue-50: #eff6ff;
+  --color-blue-100: #dbeafe;
+  --color-blue-400: #60a5fa;
+  --color-blue-500: #3b82f6;
+  --color-blue-600: #2563eb;
+  --color-indigo-100: #e0e7ff;
+  --color-indigo-400: #818cf8;
+  --color-indigo-500: #6366f1;
+  --color-indigo-600: #4f46e5;
+  --color-purple-600: #7c3aed;
+  --color-emerald-400: #34d399;
+  --color-emerald-500: #10b981;
+  --color-emerald-600: #059669;
+  --color-teal-400: #2dd4bf;
+  --color-teal-500: #14b8a6;
+  --color-teal-600: #0d9488;
+  --color-cyan-600: #0891b2;
+  --color-white: #ffffff;
+  --color-gray-50: #f9fafb;
+  --color-transparent: transparent;
+  /* Custom/in-file colors */
+  --color-grid-dot: #1e40af;
+  --color-shadow-blue: rgba(30, 64, 175, 0.4);
+  --color-shadow-emerald: rgba(16, 185, 129, 0.4);
+}
+
+.font{
+  font-family: cursive;
+}
