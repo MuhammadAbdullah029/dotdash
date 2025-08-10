@@ -121,12 +121,12 @@ const Portfolio = () => {
             transition={{ duration: 0.8 }}
             className="space-y-8"
           >
-            <div className="inline-flex items-center px-4 py-2 bg-[#192A55]/5 rounded-full text-[#192A55] text-sm font-medium mb-6 border border-[#192A55]/10">
-              <Award className="w-4 h-4 mr-2 text-blue-600" />
+            <div className="inline-flex items-center px-4 py-2 bg-emerald-50 rounded-full text-color text-sm font-medium mb-6 border border-[#192A55]/10">
+              <Award className="w-4 h-4 mr-2 text-color" />
               Our Work
             </div>
             <h1 className="text-4xl md:text-6xl font-bold leading-tight text-[#192A55]">
-              Our <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Portfolio</span>
+              Our <span className="gradient-text">Portfolio</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Explore our collection of successful projects that showcase our expertise and creativity.
@@ -152,8 +152,8 @@ const Portfolio = () => {
                 whileTap={{ scale: 0.95 }}
                 className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
                   activeFilter === filter.id
-                    ? 'bg-[#192A55] text-white'
-                    : 'bg-white text-[#192A55] hover:bg-[#192A55] hover:text-white border border-gray-200'
+                    ? 'bg text-white'
+                    : 'bg-white text-[#192A55] hover:bg-slate-900 hover:text-white border border-gray-200'
                 }`}
               >
                 {filter.label}
@@ -191,20 +191,20 @@ const Portfolio = () => {
                         alt={project.title}
                         className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#192A55]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#41ffb9]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <div className="absolute bottom-4 left-4 right-4 flex justify-between items-end">
                           <div className="flex space-x-3">
                             <motion.a
                               href={project.liveUrl}
                               whileHover={{ scale: 1.1 }}
-                              className="w-10 h-10 bg-[#D4BF7E] rounded-full flex items-center justify-center text-[#192A55] hover:bg-[#E8D5A3] transition-colors"
+                              className="w-10 h-10 bg-emerald-500 rounded-full flex items-center justify-center text-white hover:bg-emerald-700 transition-colors"
                             >
                               <ExternalLink size={18} />
                             </motion.a>
                             <motion.a
                               href={project.githubUrl}
                               whileHover={{ scale: 1.1 }}
-                              className="w-10 h-10 bg-[#D4BF7E] rounded-full flex items-center justify-center text-[#192A55] hover:bg-[#E8D5A3] transition-colors"
+                              className="w-10 h-10 bg-emerald-500 rounded-full flex items-center justify-center text-white hover:bg-emerald-700 transition-colors"
                             >
                               <Github size={18} />
                             </motion.a>
@@ -212,13 +212,13 @@ const Portfolio = () => {
                         </div>
                       </div>
                       <div className="absolute top-4 left-4">
-                        <span className="bg-white/90 backdrop-blur-sm text-[#192A55] text-xs font-medium px-3 py-1 rounded-full">
+                        <span className="bg-white/90 backdrop-blur-sm text-color text-xs font-medium px-3 py-1 rounded-full">
                           {filters.find(f => f.id === project.category)?.label}
                         </span>
                       </div>
                     </div>
                     <div className="p-6">
-                      <h3 className="text-xl font-bold text-[#192A55] mb-3">{project.title}</h3>
+                      <h3 className="text-xl font-bold text-color mb-3">{project.title}</h3>
                       <p className="text-gray-600 text-sm leading-relaxed mb-4">
                         {project.description}
                       </p>
@@ -242,7 +242,7 @@ const Portfolio = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-[#192A55]">
+      <section className="py-20 bg-gradient-to-br1">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <motion.div
@@ -251,7 +251,7 @@ const Portfolio = () => {
               transition={{ duration: 0.5 }}
             >
               <div className="text-4xl md:text-5xl font-bold mb-2 text-white">200+</div>
-              <div className="text-sm md:text-base font-medium text-blue-600">Projects Completed</div>
+              <div className="text-sm md:text-base font-medium text-white">Projects Completed</div>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -259,7 +259,7 @@ const Portfolio = () => {
               transition={{ duration: 0.5, delay: 0.1 }}
             >
               <div className="text-4xl md:text-5xl font-bold mb-2 text-white">150+</div>
-              <div className="text-sm md:text-base font-medium text-blue-600">Happy Clients</div>
+              <div className="text-sm md:text-base font-medium text-white">Happy Clients</div>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -267,7 +267,7 @@ const Portfolio = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
             >
               <div className="text-4xl md:text-5xl font-bold mb-2 text-white">5</div>
-              <div className="text-sm md:text-base font-medium text-blue-600">Years Experience</div>
+              <div className="text-sm md:text-base font-medium text-white">Years Experience</div>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -275,7 +275,7 @@ const Portfolio = () => {
               transition={{ duration: 0.5, delay: 0.3 }}
             >
               <div className="text-4xl md:text-5xl font-bold mb-2 text-white">24/7</div>
-              <div className="text-sm md:text-base font-medium text-blue-600">Support</div>
+              <div className="text-sm md:text-base font-medium text-white">Support</div>
             </motion.div>
           </div>
         </div>

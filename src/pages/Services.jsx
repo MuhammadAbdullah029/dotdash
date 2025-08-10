@@ -8,19 +8,24 @@ const Services = () => {
   const serviceRefs = useRef([])
 
   useEffect(() => {
-    // Scroll to specific service if coming from home page
-    if (location.state?.scrollToService !== undefined) {
-      const serviceIndex = location.state.scrollToService
-      if (serviceRefs.current[serviceIndex]) {
-        setTimeout(() => {
-          serviceRefs.current[serviceIndex].scrollIntoView({
-            behavior: 'smooth',
-            block: 'center'
-          })
-        }, 500)
-      }
+  // Scroll to specific service if coming from home page
+  if (location.state?.scrollToService !== undefined) {
+    const serviceIndex = location.state.scrollToService;
+    const element = serviceRefs.current[serviceIndex];
+
+    if (element) {
+      setTimeout(() => {
+        const navbarHeight = 150; // adjust this based on your mobile navbar height
+        const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+        window.scrollTo({
+          top: elementPosition - navbarHeight,
+          behavior: 'smooth'
+        });
+      }, 500);
     }
-  }, [location.state])
+  }
+}, [location.state]);
+
 
   const mainServices = [
     {
@@ -124,12 +129,12 @@ const Services = () => {
             transition={{ duration: 0.8 }}
             className="space-y-8"
           >
-            <div className="inline-flex items-center px-4 py-2 bg-[#192A55]/5 rounded-full text-[#192A55] text-sm font-medium mb-6 border border-[#192A55]/10">
-              <Award className="w-4 h-4 mr-2 text-blue-600" />
+            <div className="inline-flex items-center px-4 py-2 bg-emerald-50 rounded-full text-color text-sm font-medium mb-6 border border-[#192A55]/10">
+              <Award className="w-4 h-4 mr-2 text-color" />
               Professional Services
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold leading-tight text-[#192A55]">
-              Our <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Services</span>
+            <h1 className="text-4xl md:text-6xl font-bold leading-tight slate">
+              Our <span className="gradient-text">Services</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               We offer comprehensive digital solutions to help your business thrive in the modern world.
@@ -149,9 +154,8 @@ const Services = () => {
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
-                className={`grid lg:grid-cols-2 gap-12 items-center ${
-                  index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''
-                }`}
+                className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''
+                  }`}
               >
                 <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
                   <motion.div
@@ -159,10 +163,10 @@ const Services = () => {
                     className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
                   >
                     <div className="flex items-center space-x-4 mb-6">
-                      <div className="w-16 h-16 bg-[#192A55] rounded-2xl flex items-center justify-center">
+                      <div className="w-16 h-16 bg rounded-2xl flex items-center justify-center">
                         <service.icon size={32} className="text-white" />
                       </div>
-                      <h3 className="text-2xl font-bold text-[#192A55]">{service.title}</h3>
+                      <h3 className="text-2xl font-bold gradient-text">{service.title}</h3>
                     </div>
                     <p className="text-gray-600 text-lg mb-8 leading-relaxed">
                       {service.description}
@@ -176,7 +180,7 @@ const Services = () => {
                           transition={{ duration: 0.5, delay: featureIndex * 0.1 }}
                           className="flex items-center space-x-3"
                         >
-                          <div className="w-2 h-2 bg-[#192A55] rounded-full"></div>
+                          <div className="w-2 h-2 bg-emerald-600 rounded-full"></div>
                           <span className="text-gray-600">{feature}</span>
                         </motion.div>
                       ))}
@@ -208,8 +212,8 @@ const Services = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-5xl font-bold mb-6 text-[#192A55]">
-              Additional <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Services</span>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6 slate">
+              Additional <span className="gradient-text">Services</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               We also offer a range of complementary services to support your digital presence.
@@ -226,10 +230,10 @@ const Services = () => {
                 whileHover={{ y: -10 }}
                 className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-center border border-gray-100"
               >
-                <div className="w-16 h-16 bg-[#192A55] rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <service.icon size={32} className="text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-[#192A55] mb-4">{service.title}</h3>
+                <h3 className="text-xl font-bold text-color mb-4">{service.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{service.description}</p>
               </motion.div>
             ))}
@@ -246,8 +250,8 @@ const Services = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-5xl font-bold mb-6 text-[#192A55]">
-              Our <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Process</span>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6 slate">
+              Our <span className="gradient-text">Process</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               We follow a proven process to ensure your project is delivered on time and exceeds expectations.
@@ -263,10 +267,10 @@ const Services = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="w-16 h-16 bg-[#192A55] rounded-full flex items-center justify-center mx-auto mb-6 text-white font-bold text-xl">
+                <div className="w-16 h-16 bg rounded-full flex items-center justify-center mx-auto mb-6 text-white font-bold text-xl">
                   {step.step}
                 </div>
-                <h3 className="text-xl font-bold text-[#192A55] mb-4">{step.title}</h3>
+                <h3 className="text-xl font-bold text-color mb-4">{step.title}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{step.description}</p>
               </motion.div>
             ))}
@@ -275,13 +279,13 @@ const Services = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-[#192A55]">
+      <section className="py-20 bg-gradient-to-br1">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="space-y-8"
+            className="space-y-8 flex flex-col items-center justify-center "
           >
             <h2 className="text-3xl md:text-5xl font-bold text-white">
               Ready to Get Started?
@@ -291,12 +295,13 @@ const Services = () => {
             </p>
             <Link to="/contact">
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.07, boxShadow: "0 20px 40px rgba(16, 185, 129, 0.4)" }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-br from-slate-900 to-slate-800 text-[#fff] px-8 py-4 rounded-full font-semibold text-lg flex items-center space-x-2 mx-auto hover:bg-slate-900 transition-colors"
+                className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-full font-semibold text-lg flex items-center space-x-2 shadow-2xl hover:shadow-emerald-500/25 transition-all duration-300 relative overflow-hidden group"
               >
-                <span>Start Your Project</span>
-                <ArrowRight size={20} />
+                <div className="absolute w-full inset-0 bg-gradient-to-r from-emerald-500 to-teal-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <span className="relative z-10">Start Your Project</span>
+                <ArrowRight size={20} className="relative z-10" />
               </motion.button>
             </Link>
           </motion.div>

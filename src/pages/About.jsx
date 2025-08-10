@@ -90,12 +90,12 @@ const About = () => {
             transition={{ duration: 0.8 }}
             className="space-y-8"
           >
-            <div className="inline-flex items-center px-4 py-2 bg-[#192A55]/5 rounded-full text-[#192A55] text-sm font-medium mb-6 border border-[#192A55]/10">
-              <Users className="w-4 h-4 mr-2 text-blue-600" />
+            <div className="inline-flex items-center px-4 py-2 bg-emerald-50 rounded-full text-color text-sm font-medium mb-6 border border-[#192A55]/10">
+              <Users className="w-4 h-4 mr-2 text-color" />
               About Us
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold leading-tight text-[#192A55]">
-              About <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">DOt&Dash</span>
+            <h1 className="text-4xl md:text-6xl font-bold leading-tight text-slate-700">
+              About <span className="gradient-text">Dot&Dash</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               We're a passionate team of designers and developers creating digital experiences that make a difference.
@@ -113,8 +113,8 @@ const About = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-3xl md:text-5xl font-bold mb-8 text-[#192A55]">
-                Our <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Story</span>
+              <h2 className="text-3xl md:text-5xl font-bold mb-8 text-slate-600">
+                Our <span className="gradient-text">Story</span>
               </h2>
               <div className="space-y-6 text-gray-600 leading-relaxed">
                 <p>
@@ -161,8 +161,8 @@ const About = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-5xl font-bold mb-6 text-[#192A55]">
-              Our <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Values</span>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6 text-slate-700">
+              Our <span className="gradient-text">Values</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               These core values guide everything we do and shape how we work with our clients.
@@ -179,10 +179,10 @@ const About = () => {
                 whileHover={{ y: -10 }}
                 className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-center border border-gray-100"
               >
-                <div className="w-16 h-16 bg-[#192A55] rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <value.icon size={32} className="text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-[#192A55] mb-4">{value.title}</h3>
+                <h3 className="text-xl font-bold text-color mb-4">{value.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{value.description}</p>
               </motion.div>
             ))}
@@ -254,7 +254,7 @@ const About = () => {
       </section> */}
 
       {/* Stats Section */}
-      <section className="py-20 bg-[#192A55]">
+      <section className="py-20 bg-gradient-to-br1">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {stats.map((stat, index) => (
@@ -265,7 +265,7 @@ const About = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <div className="text-4xl md:text-5xl font-bold mb-2 text-white">{stat.value}</div>
-                <div className="text-sm md:text-base font-medium text-blue-600">{stat.label}</div>
+                <div className="text-sm md:text-base font-medium text-white">{stat.label}</div>
               </motion.div>
             ))}
           </div>

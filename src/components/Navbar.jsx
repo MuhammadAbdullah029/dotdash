@@ -59,15 +59,15 @@ const Navbar = () => {
                 onClick={() => handleNavClick(item.path)}
                 className={`relative px-3 py-2 text-sm font-medium transition-colors duration-200 ${
                   location.pathname === item.path
-                    ? scrolled ? 'text-blue-600' : 'text-blue-600'
-                    : scrolled ? 'text-black hover:text-blue-600' : 'text-black hover:text-blue-600'
+                    ? scrolled ? 'text-color' : 'text-emerald-700'
+                    : scrolled ? 'text-black hover:text-emerald-600' : 'text-black hover:text-emerald-600'
                 }`}
               >
                 {item.name}
                 {location.pathname === item.path && (
                   <motion.div
                     layoutId="activeTab"
-                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-500"
+                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-emerald-500"
                     initial={false}
                     transition={{ type: "spring", stiffness: 500, damping: 30 }}
                   />
@@ -75,13 +75,15 @@ const Navbar = () => {
               </button>
             ))}
             <div className="flex items-center space-x-4">
-              <motion.button
+              <Link to='/contact' >
+                <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg transition-all duration-300"
+                className="bg text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg transition-all duration-300"
               >
                 Get Started
               </motion.button>
+              </Link>
             </div>
           </div>
 
@@ -90,7 +92,7 @@ const Navbar = () => {
             <button
               onClick={() => setIsOpen(!isOpen)}
               className={`transition-colors ${
-                scrolled ? 'text-gray-700 hover:text-[#D4BF7E]' : 'text-white hover:text-[#D4BF7E]'
+                scrolled ? 'text-gray-800 hover:text-emerald-600' : 'text-white hover:text-emerald-600'
               }`}
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -116,20 +118,22 @@ const Navbar = () => {
                   onClick={() => setIsOpen(false)}
                   className={`block px-3 py-2 text-base font-medium transition-colors duration-200 ${
                     location.pathname === item.path
-                      ? 'text-[#D4BF7E] bg-[#D4BF7E]/10'
-                      : 'text-gray-700 hover:text-[#D4BF7E] hover:bg-[#D4BF7E]/5'
+                      ? 'text-color bg-emerald-600/10'
+                      : 'text-gray-700 hover:text-emerald-600 hover:bg-emerald-600/5'
                   } rounded-lg`}
                 >
                   {item.name}
                 </Link>
               ))}
+            <Link to="/contact">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="w-full bg-[#192A55] text-white px-6 py-2 rounded-full font-semibold mt-4 hover:bg-[#1a2c5a] transition-colors duration-300"
-              >
+                className="w-full bg text-white px-6 py-2 rounded-full font-semibold mt-4 transition-colors duration-300"
+                >
                 Get Started
               </motion.button>
+            </Link>
             </div>
           </motion.div>
         )}

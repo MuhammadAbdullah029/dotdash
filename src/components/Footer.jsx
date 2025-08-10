@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react'
 import Logo from './Logo'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 
 const Footer = () => {
   const socialLinks = [
@@ -15,23 +16,46 @@ const Footer = () => {
     'E-commerce Development',
     'Brand Identity Design',
     'Portfolio Websites',
-    'UI/UX Design',
-    'Web Development',
-    'Digital Marketing'
   ]
 
-  const quickLinks = [
-    { name: 'Home', href: '/' },
-    { name: 'Services', href: '/services' },
-    { name: 'Portfolio', href: '/portfolio' },
-    { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' }
+  const [isOpen, setIsOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+  const location = useLocation()
+  const navigate = useNavigate()
+  
+    const handleServiceClick = (serviceIndex) => {
+      navigate('/services', { state: { scrollToService: serviceIndex } })
+    }
+
+  const handleNavClick = (path) => {
+    navigate(path)
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }, 100)
+    setIsOpen(false)
+  }
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  const pages = [
+    { name: 'Home', path: '/' },
+    { name: 'Services', path: '/services' },
+    { name: 'Portfolio', path: '/portfolio' },
+    { name: 'About', path: '/about' },
+    { name: 'Contact', path: '/contact' }
   ]
 
   return (
-    <footer className="bg-gradient-to-br from-slate-900 to-slate-800">
+    <footer className="bg1">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
           {/* Company Info */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -44,12 +68,12 @@ const Footer = () => {
               We create stunning digital experiences that help businesses grow and connect with their audience through innovative design and development.
             </p>
             <div className="flex space-x-4">
-              {socialLinks.map((social, index) => (
+              {socialLinks.map((social) => (
                 <motion.a
                   key={social.label}
                   href={social.href}
                   whileHover={{ scale: 1.1, y: -2 }}
-                  className="w-10 h-10 bg-[#D4BF7E]/10 hover:bg-[#D4BF7E]/20 rounded-full flex items-center justify-center text-white hover:text-white transition-colors"
+                  className="w-10 h-10 bg-[#D4BF7E]/10 hover:bg-[#D4BF7E]/20 rounded-full flex items-center justify-center text-white hover:text-[#D4BF7E] transition-colors"
                   aria-label={social.label}
                 >
                   <social.icon size={18} />
@@ -69,12 +93,12 @@ const Footer = () => {
             <ul className="space-y-2">
               {services.map((service, index) => (
                 <li key={index}>
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:text-white transition-colors text-sm"
+                  <p
+                    onClick={() => handleServiceClick(index)}
+                    className="text-gray-300 hover:text-white transition-colors text-sm cursor-pointer"
                   >
                     {service}
-                  </a>
+                  </p>
                 </li>
               ))}
             </ul>
@@ -89,14 +113,15 @@ const Footer = () => {
           >
             <h3 className="text-lg font-semibold text-white">Quick Links</h3>
             <ul className="space-y-2">
-              {quickLinks.map((link, index) => (
+              {pages.map((link, index) => (
                 <li key={index}>
-                  <a
-                    href={link.href}
+                  <Link
+                    onClick={() => handleNavClick(link.path)}
+                    to={link.path}
                     className="text-gray-300 hover:text-white transition-colors text-sm"
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -135,7 +160,7 @@ const Footer = () => {
           className="border-t border-[#D4BF7E]/20 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center"
         >
           <p className="text-gray-400 text-sm">
-            © 2024 DOt&Dash Agency. All rights reserved.
+            © 2024 Dot&Dash Agency. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">

@@ -117,7 +117,7 @@ const Home = () => {
               transition={{ duration: 0.8 }}
               className="space-y-8"
             >
-              <div className="inline-flex items-center px-6 py-3 bg-blue-50 rounded-full text-blue-700 text-sm font-medium border border-blue-100">
+              <div className="inline-flex items-center px-6 py-3 bg-emerald-50 rounded-full text-color text-sm font-medium border border-blue-100">
                 <Award className="w-4 h-4 mr-2" />
                 <span className="font-semibold">
                   Best Digital Solutions
@@ -132,7 +132,7 @@ const Home = () => {
               >
                 <span className="text-slate-600">We Build </span>
                 <br />
-                <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                <span className="gradient-text">
                   Digital Excellence
                 </span>
                 <br />
@@ -156,9 +156,9 @@ const Home = () => {
               >
                 <Link to="/contact">
                   <motion.button
-                    whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(30, 64, 175, 0.4)" }}
+                    whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(16, 185, 129, 0.4)" }}
                     whileTap={{ scale: 0.95 }}
-                    className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center space-x-2 shadow-lg hover:shadow-blue-500/25 transition-all duration-300"
+                    className="bg text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center space-x-2 shadow-lg hover:shadow-blue-500/25 transition-all duration-300"
                   >
                     <span>Get Started</span>
                     <ArrowRight size={20} />
@@ -185,7 +185,7 @@ const Home = () => {
                 transition={{ duration: 0.8, delay: 0.8 }}
               >
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-600">500+</div>
+                  <div className="text-2xl font-bold text-slate-700">500+</div>
                   <div className="text-sm text-slate-500">Happy Clients</div>
                 </div>
                 <div className="text-center">
@@ -193,7 +193,7 @@ const Home = () => {
                   <div className="text-sm text-slate-500">Projects</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-indigo-600">4.9★</div>
+                  <div className="text-2xl font-bold text-slate-700">4.9★</div>
                   <div className="text-sm text-slate-500">Rating</div>
                 </div>
               </motion.div>
@@ -252,13 +252,13 @@ const Home = () => {
 
                 {/* Floating Elements */}
                 <FloatingElement duration={6} amplitude={15}>
-                  <div className="absolute -bottom-4 -right-4 w-20 h-20 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-2xl flex items-center justify-center shadow-2xl border-4 border-white">
+                  <div className="absolute -bottom-10 -right-4 w-20 h-20 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-2xl flex items-center justify-center shadow-2xl border-4 border-white">
                     <Star className="w-8 h-8 text-white" />
                   </div>
                 </FloatingElement>
 
                 <FloatingElement duration={4} delay={1} amplitude={10}>
-                  <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-xl flex items-center justify-center shadow-2xl border-4 border-white">
+                  <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl flex items-center justify-center shadow-2xl border-4 border-white">
                     <CheckCircle className="w-6 h-6 text-white" />
                   </div>
                 </FloatingElement>
@@ -269,7 +269,7 @@ const Home = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-gradient-to-br from-slate-900 to-slate-800 relative overflow-hidden">
+      <section className="py-20 bg1 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-900/20 to-transparent"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
@@ -293,9 +293,9 @@ const Home = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="text-center group"
+                className="text-center group h-[35vh]"
               >
-                <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 hover:scale-105 transition-all duration-300 border border-white/10">
+                <div className="bg-white/5 backdrop-blur-sm h-full rounded-2xl p-6 hover:scale-105 transition-all duration-300 border border-white/10">
                   <div className={`w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg ${
                     index === 0 ? 'bg-gradient-to-br from-blue-500 to-indigo-600' :
                     index === 1 ? 'bg-gradient-to-br from-emerald-500 to-teal-600' :
@@ -329,12 +329,12 @@ const Home = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <div className="inline-flex items-center px-6 py-3 bg-blue-50 rounded-full text-blue-700 text-sm font-medium mb-6 border border-blue-100">
+            <div className="inline-flex items-center px-6 py-3 bg-emerald-50 rounded-full text-color text-sm font-medium mb-6 border border-blue-100">
               <Target className="w-4 h-4 mr-2" />
               Our Expertise
             </div>
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-slate-900">
-              Services That Drive <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Success</span>
+              Services That Drive <span className="gradient-text">Success</span>
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               From concept to launch, we provide comprehensive digital solutions that transform your business and exceed your expectations.
@@ -396,7 +396,7 @@ const Home = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 bg-gradient-to-br from-teal-900 via-emerald-900 to-cyan-900 relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-br1 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-teal-500/5 to-transparent"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
@@ -459,7 +459,7 @@ const Home = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-slate-800">
-              Why Choose <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">DOt&Dash</span>
+              Why Choose <span className="gradient-text">DOt&Dash</span>
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               We combine creativity, technology, and strategy to deliver exceptional results that drive your business forward.
@@ -475,7 +475,7 @@ const Home = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="text-center group"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300">
+                <div className="w-16 h-16 bg rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300">
                   <item.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-slate-800 mb-4">{item.title}</h3>
@@ -487,7 +487,7 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-slate-900 via-emerald-900 to-teal-900 relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-br1 relative overflow-hidden">
         {/* Floating Gradient Orbs */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-20 left-20 w-64 h-64 bg-gradient-to-br from-emerald-400/20 to-teal-600/20 rounded-full blur-3xl animate-pulse"></div>

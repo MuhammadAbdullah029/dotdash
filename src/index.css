@@ -63,3 +63,30 @@
 .font{
   font-family: cursive;
 }
+.cg{
+  color: #D4BF7E;
+}
+.gradient-text {
+  background: linear-gradient(to right, #10b981, #0d9488);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.bg-light{
+  background-color: #34d399;
+}
+.text-color{
+  color: #059669;
+}
+.bg{
+  background: linear-gradient(to right, #10b981, #0d9488);
+}
+.bg1{
+  background: linear-gradient(to right, #334155, #0f172a);
+}
+.bg-gradient-to-br1 {
+  background-image: linear-gradient(to bottom right, #134e4a, #064e3b, #164e63);
+}
+.slate{
+  color: #334155;
+}

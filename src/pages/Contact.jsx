@@ -85,12 +85,12 @@ const Contact = () => {
             transition={{ duration: 0.8 }}
             className="space-y-8"
           >
-            <div className="inline-flex items-center px-4 py-2 bg-[#192A55]/5 rounded-full text-[#192A55] text-sm font-medium mb-6 border border-[#192A55]/10">
-              <Mail className="w-4 h-4 mr-2 text-blue-600" />
+            <div className="inline-flex items-center px-4 py-2 bg-emerald-50 rounded-full text-color text-sm font-medium mb-6 border border-[#192A55]/10">
+              <Mail className="w-4 h-4 mr-2 text-color" />
               Get In Touch
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold leading-tight text-[#192A55]">
-              Let's <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Connect</span>
+            <h1 className="text-4xl md:text-6xl font-bold leading-tight text-salte-700">
+              Let's <span className="gradient-text">Connect</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Ready to start your next project? We'd love to hear from you and discuss how we can help bring your vision to life.
@@ -112,11 +112,11 @@ const Contact = () => {
                 whileHover={{ y: -10 }}
                 className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-center border border-gray-100"
               >
-                <div className="w-16 h-16 bg-[#192A55] rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <info.icon size={32} className="text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-[#192A55] mb-2">{info.title}</h3>
-                <p className="text-blue-600 font-medium mb-2">{info.details}</p>
+                <h3 className="text-xl font-bold text-color mb-2">{info.title}</h3>
+                <p className="text-color font-medium mb-2">{info.details}</p>
                 <p className="text-gray-600 text-sm">{info.description}</p>
               </motion.div>
             ))}
@@ -129,8 +129,8 @@ const Contact = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-8 text-[#192A55]">
-                Start Your <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Project</span>
+              <h2 className="text-3xl md:text-4xl font-bold mb-8 text-slate-700">
+                Start Your <span className="gradient-text">Project</span>
               </h2>
               <p className="text-gray-600 text-lg leading-relaxed mb-8">
                 Fill out the form below and we'll get back to you within 24 hours.
@@ -138,15 +138,15 @@ const Contact = () => {
               </p>
               <div className="space-y-6">
                 <div className="flex items-center space-x-4">
-                  <CheckCircle className="text-blue-600 flex-shrink-0" size={20} />
+                  <CheckCircle className="text-color flex-shrink-0" size={20} />
                   <span className="text-gray-600">Free consultation and project estimate</span>
                 </div>
                 <div className="flex items-center space-x-4">
-                  <CheckCircle className="text-blue-600 flex-shrink-0" size={20} />
+                  <CheckCircle className="text-color flex-shrink-0" size={20} />
                   <span className="text-gray-600">24-hour response time guaranteed</span>
                 </div>
                 <div className="flex items-center space-x-4">
-                  <CheckCircle className="text-blue-600 flex-shrink-0" size={20} />
+                  <CheckCircle className="text-color flex-shrink-0" size={20} />
                   <span className="text-gray-600">No obligation, no pressure approach</span>
                 </div>
               </div>
@@ -171,7 +171,7 @@ const Contact = () => {
                       required
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-blue-600 focus:bg-white transition-colors"
+                      className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-emerald-600 focus:bg-white transition-colors"
                       placeholder="Your full name"
                     />
                   </div>
@@ -186,7 +186,7 @@ const Contact = () => {
                       required
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-blue-600 focus:bg-white transition-colors"
+                      className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-emerald-600 focus:bg-white transition-colors"
                       placeholder="your@email.com"
                     />
                   </div>
@@ -202,7 +202,7 @@ const Contact = () => {
                     name="company"
                     value={formData.company}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-blue-600 focus:bg-white transition-colors"
+                    className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-emerald-600 focus:bg-white transition-colors"
                     placeholder="Your company name"
                   />
                 </div>
@@ -218,7 +218,7 @@ const Contact = () => {
                       required
                       value={formData.service}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-gray-900 focus:outline-none focus:border-blue-600 focus:bg-white transition-colors"
+                      className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-gray-900 focus:outline-none focus:border-emerald-600 focus:bg-white transition-colors"
                     >
                       <option value="">Select a service</option>
                       {services.map((service, index) => (
@@ -235,7 +235,7 @@ const Contact = () => {
                       name="budget"
                       value={formData.budget}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-gray-900 focus:outline-none focus:border-blue-600 focus:bg-white transition-colors"
+                      className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-gray-900 focus:outline-none focus:border-emerald-600 focus:bg-white transition-colors"
                     >
                       <option value="">Select budget range</option>
                       {budgetRanges.map((range, index) => (
@@ -256,7 +256,7 @@ const Contact = () => {
                     rows={6}
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-blue-600 focus:bg-white transition-colors resize-none"
+                    className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-emerald-600 focus:bg-white transition-colors resize-none"
                     placeholder="Tell us about your project, goals, timeline, and any specific requirements..."
                   />
                 </div>
@@ -268,7 +268,7 @@ const Contact = () => {
                   className={`w-full py-4 rounded-lg font-semibold text-lg flex items-center justify-center space-x-2 transition-all duration-300 ${
                     isSubmitted
                       ? 'bg-green-500 text-white'
-                      : 'bg-[#192A55] text-white hover:bg-[#1a2c5a] hover:shadow-lg'
+                      : 'bg text-white hover:shadow-lg'
                   }`}
                   disabled={isSubmitted}
                 >
@@ -299,8 +299,8 @@ const Contact = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#192A55]">
-              Visit Our <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Office</span>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-salte-700">
+              Visit Our <span className="gradient-text">Office</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Located in the heart of New York City, our office is always open for meetings and consultations.
@@ -315,8 +315,8 @@ const Contact = () => {
           >
             <div className="w-full h-96 bg-white rounded-2xl flex items-center justify-center border border-gray-100">
               <div className="text-center">
-                <MapPin size={48} className="text-blue-600 mx-auto mb-4" />
-                <p className="text-[#192A55] text-lg font-medium">Interactive Map</p>
+                <MapPin size={48} className="text-color mx-auto mb-4" />
+                <p className="text-color text-lg font-medium">Interactive Map</p>
                 <p className="text-gray-600">123 Design Street, New York, NY 10001</p>
               </div>
             </div>
