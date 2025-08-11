@@ -42,21 +42,18 @@ const Home = () => {
     {
       name: 'Sarah Johnson',
       role: 'CEO, TechStart Inc.',
-      image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face',
       quote: 'DOt&Dash transformed our online presence completely. Our sales increased by 300% within the first quarter.',
       rating: 5
     },
     {
       name: 'Michael Chen',
       role: 'Founder, Creative Studio',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face',
       quote: 'The team delivered beyond our expectations. The attention to detail and professionalism is unmatched.',
       rating: 5
     },
     {
       name: 'Emily Rodriguez',
       role: 'Marketing Director, Fashion Brand',
-      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face',
       quote: 'Working with DOt&Dash was a game-changer. They understood our vision and brought it to life perfectly.',
       rating: 5
     }
@@ -132,7 +129,7 @@ const Home = () => {
               >
                 <span className="text-slate-600">We Build </span>
                 <br />
-                <span className="gradient-text">
+                <span className="gradient-text text-7xl">
                   Digital Excellence
                 </span>
                 <br />
@@ -293,7 +290,7 @@ const Home = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="text-center group h-[35vh]"
+                className="text-center group h-[38vh]"
               >
                 <div className="bg-white/5 backdrop-blur-sm h-full rounded-2xl p-6 hover:scale-105 transition-all duration-300 border border-white/10">
                   <div className={`w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg ${
@@ -406,7 +403,7 @@ const Home = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
-              What Our <span className="bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent">Clients Say</span>
+              What Our <span className="gradient-text">Clients Say</span>
             </h2>
             <p className="text-xl text-white/70 max-w-3xl mx-auto">
               Don't just take our word for it. Here's what our satisfied clients have to say about working with us.

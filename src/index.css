@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 
 /* Demo class to smoothly animate background color between a root color and its lighter version */
 @keyframes bgRootPulse {
@@ -21,7 +23,6 @@
 .animate-root-colors {
   animation: bgRootPulse 15s infinite linear;
 }
-@import "tailwindcss";
 
 :root {
   /* Tailwind palette approximations */
@@ -71,6 +72,7 @@
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  font-family: Lobster Two;
 }
 .bg-light{
   background-color: #34d399;

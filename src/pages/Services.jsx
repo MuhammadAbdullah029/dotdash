@@ -166,7 +166,7 @@ const Services = () => {
                       <div className="w-16 h-16 bg rounded-2xl flex items-center justify-center">
                         <service.icon size={32} className="text-white" />
                       </div>
-                      <h3 className="text-2xl font-bold gradient-text">{service.title}</h3>
+                      <h3 className="text-2xl font-bold text-color">{service.title}</h3>
                     </div>
                     <p className="text-gray-600 text-lg mb-8 leading-relaxed">
                       {service.description}

@@ -115,7 +115,7 @@ const Navbar = () => {
                 <Link
                   key={item.name}
                   to={item.path}
-                  onClick={() => setIsOpen(false)}
+                  onClick={() => {setIsOpen(false); handleNavClick(item.path);}}
                   className={`block px-3 py-2 text-base font-medium transition-colors duration-200 ${
                     location.pathname === item.path
                       ? 'text-color bg-emerald-600/10'
