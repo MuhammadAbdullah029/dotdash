@@ -276,7 +276,7 @@ const Home = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Trusted by Industry Leaders
+              Trusted by Industry <span className="gradient-text">Leaders</span>
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
               Our track record speaks for itself. Here's what we've achieved together with our clients.
@@ -456,7 +456,7 @@ const Home = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-slate-800">
-              Why Choose <span className="gradient-text">DOt&Dash</span>
+              Why Choose <span className="gradient-text">Dot&Dash</span>
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               We combine creativity, technology, and strategy to deliver exceptional results that drive your business forward.

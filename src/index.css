@@ -67,12 +67,16 @@
 .cg{
   color: #D4BF7E;
 }
+#logo{
+  scale: 1;
+}
 .gradient-text {
   background: linear-gradient(to right, #10b981, #0d9488);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   font-family: Lobster Two;
+  scale: 2.5;
 }
 .bg-light{
   background-color: #34d399;
