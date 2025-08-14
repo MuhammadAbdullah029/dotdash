@@ -70,7 +70,7 @@ const Portfolio = () => {
       category: 'branding',
       description: 'Modern brand identity for a fine dining restaurant including menu design and signage.',
       image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&h=400&fit=crop',
-      tags: ['Brand Design', 'Menu Design', 'Signage', 'Photography'],
+      tags: ['Brand Design', 'Menu Design', 'Signage'],
       liveUrl: '#',
       githubUrl: '#'
     },
@@ -250,7 +250,7 @@ const Portfolio = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <div className="text-4xl md:text-5xl font-bold mb-2 text-white">200+</div>
+              <div className="text-4xl md:text-5xl font-bold mb-2 text-white">30+</div>
               <div className="text-sm md:text-base font-medium text-white">Projects Completed</div>
             </motion.div>
             <motion.div
@@ -258,7 +258,7 @@ const Portfolio = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              <div className="text-4xl md:text-5xl font-bold mb-2 text-white">150+</div>
+              <div className="text-4xl md:text-5xl font-bold mb-2 text-white">25+</div>
               <div className="text-sm md:text-base font-medium text-white">Happy Clients</div>
             </motion.div>
             <motion.div
@@ -266,7 +266,7 @@ const Portfolio = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <div className="text-4xl md:text-5xl font-bold mb-2 text-white">5</div>
+              <div className="text-4xl md:text-5xl font-bold mb-2 text-white">3</div>
               <div className="text-sm md:text-base font-medium text-white">Years Experience</div>
             </motion.div>
             <motion.div

@@ -25,58 +25,12 @@ const About = () => {
     }
   ]
 
-  const team = [
-    {
-      name: 'Sarah Johnson',
-      role: 'Creative Director',
-      image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=300&h=300&fit=crop&crop=face',
-      bio: 'With over 8 years of experience in design, Sarah leads our creative vision and ensures every project tells a compelling story.',
-      social: {
-        linkedin: '#',
-        twitter: '#',
-        github: '#'
-      }
-    },
-    {
-      name: 'Michael Chen',
-      role: 'Lead Developer',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face',
-      bio: 'Michael brings technical expertise and innovative solutions to complex development challenges with 10+ years of experience.',
-      social: {
-        linkedin: '#',
-        twitter: '#',
-        github: '#'
-      }
-    },
-    {
-      name: 'Emily Rodriguez',
-      role: 'UX/UI Designer',
-      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&crop=face',
-      bio: 'Emily specializes in creating intuitive user experiences that delight users and drive business results.',
-      social: {
-        linkedin: '#',
-        twitter: '#',
-        github: '#'
-      }
-    },
-    {
-      name: 'David Kim',
-      role: 'Brand Strategist',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face',
-      bio: 'David helps brands find their unique voice and position in the market through strategic thinking and creative execution.',
-      social: {
-        linkedin: '#',
-        twitter: '#',
-        github: '#'
-      }
-    }
-  ]
 
   const stats = [
-    { value: '5+', label: 'Years in Business' },
-    { value: '200+', label: 'Projects Delivered' },
-    { value: '150+', label: 'Happy Clients' },
-    { value: '50+', label: 'Awards Won' }
+    { value: '3+', label: 'Years in Business' },
+    { value: '30+', label: 'Projects Delivered' },
+    { value: '25+', label: 'Happy Clients' },
+    { value: '3+', label: 'Awards Won' }
   ]
 
   return (
@@ -118,7 +72,7 @@ const About = () => {
               </h2>
               <div className="space-y-6 text-gray-600 leading-relaxed">
                 <p>
-                  Founded in 2019, DOt&Dash began as a small team of passionate designers and developers
+                  Founded in 2023, Dot&Dash began as a small team of passionate designers and developers
                   who believed that great design could change the world. We started with a simple mission:
                   to help businesses tell their stories through beautiful, functional digital experiences.
                 </p>
@@ -128,7 +82,7 @@ const About = () => {
                   and the impact of thoughtful design.
                 </p>
                 <p>
-                  Today, we're proud to have worked with over 150 clients, from startups to Fortune 500
+                  Today, we're proud to have worked with over 25 clients, from startups to Fortune 30
                   companies, helping them achieve their digital goals and connect with their audiences
                   in meaningful ways.
                 </p>
@@ -189,69 +143,6 @@ const About = () => {
           </div>
         </div>
       </section>
-
-      {/* Team Section */}
-      {/* <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-5xl font-bold mb-6 text-[#192A55]">
-              Meet Our <span className="text-[#D4BF7E]">Team</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              The talented individuals who bring creativity, expertise, and passion to every project.
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {team.map((member, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                whileHover={{ y: -10 }}
-                className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-center border border-gray-100"
-              >
-                <div className="relative mb-6">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-24 h-24 rounded-full mx-auto object-cover border-4 border-gray-100"
-                  />
-                </div>
-                <h3 className="text-xl font-bold text-[#192A55] mb-2">{member.name}</h3>
-                <p className="text-[#D4BF7E] text-sm mb-4 font-medium">{member.role}</p>
-                <p className="text-gray-600 text-sm leading-relaxed mb-6">{member.bio}</p>
-                <div className="flex justify-center space-x-4">
-                  <a
-                    href={member.social.linkedin}
-                    className="w-8 h-8 bg-gray-100 hover:bg-[#192A55] rounded-full flex items-center justify-center text-gray-600 hover:text-white transition-colors"
-                  >
-                    <Linkedin size={16} />
-                  </a>
-                  <a
-                    href={member.social.twitter}
-                    className="w-8 h-8 bg-gray-100 hover:bg-[#192A55] rounded-full flex items-center justify-center text-gray-600 hover:text-white transition-colors"
-                  >
-                    <Twitter size={16} />
-                  </a>
-                  <a
-                    href={member.social.github}
-                    className="w-8 h-8 bg-gray-100 hover:bg-[#192A55] rounded-full flex items-center justify-center text-gray-600 hover:text-white transition-colors"
-                  >
-                    <Github size={16} />
-                  </a>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section> */}
 
       {/* Stats Section */}
       <section className="py-20 bg-gradient-to-br1">

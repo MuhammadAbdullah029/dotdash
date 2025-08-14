@@ -14,18 +14,21 @@ const Footer = () => {
 
   const services = [
     'E-commerce Development',
-    'Brand Identity Design',
-    'Portfolio Websites',
+    'Booking & Appointment Systems',
+    'Portfolio Website Creation',
+    'News, Blog & Content Websites',
+    'Landing Pages for Digital Marketers & SaaS',
+    'Website Redesign for Outdated Websites'
   ]
 
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const location = useLocation()
   const navigate = useNavigate()
-  
-    const handleServiceClick = (serviceIndex) => {
-      navigate('/services', { state: { scrollToService: serviceIndex } })
-    }
+
+  const handleServiceClick = (serviceIndex) => {
+    navigate('/services', { state: { scrollToService: serviceIndex } })
+  }
 
   const handleNavClick = (path) => {
     navigate(path)
@@ -63,7 +66,7 @@ const Footer = () => {
             transition={{ duration: 0.5 }}
             className="space-y-4 "
           >
-            <Logo size="md" variant="dark" />
+            <Logo size="lg" variant="dark" />
             <p className="text-gray-300 text-sm leading-relaxed">
               We create stunning digital experiences that help businesses grow and connect with their audience through innovative design and development.
             </p>
@@ -91,10 +94,22 @@ const Footer = () => {
           >
             <h3 className="text-lg font-semibold text-white">Services</h3>
             <ul className="space-y-2">
-              {services.map((service, index) => (
+              {/* Main Services (first 3) */}
+              {services.slice(0, 3).map((service, index) => (
                 <li key={index}>
                   <p
                     onClick={() => handleServiceClick(index)}
+                    className="text-gray-300 hover:text-white transition-colors text-sm cursor-pointer"
+                  >
+                    {service}
+                  </p>
+                </li>
+              ))}
+              {/* Additional Services (next 3) */}
+              {services.slice(3).map((service, index) => (
+                <li key={index + 3}>
+                  <p
+                    onClick={() => handleServiceClick(index + 3)}
                     className="text-gray-300 hover:text-white transition-colors text-sm cursor-pointer"
                   >
                     {service}
@@ -138,15 +153,15 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Mail size={16} className="text-white" />
-                <span className="text-gray-300 text-sm">hello@dotdash.agency</span>
+                <a href='mailto:' className="text-gray-300 text-sm">hello@dotdash.agency</a>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone size={16} className="text-white" />
-                <span className="text-gray-300 text-sm">+1 (555) 123-4567</span>
+                <a href='telto:' className="text-gray-300 text-sm">+1 (555) 123-4567</a>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin size={16} className="text-white" />
-                <span className="text-gray-300 text-sm">New York, NY 10001</span>
+                <a href='#' className="text-gray-300 text-sm">New York, NY 10001</a>
               </div>
             </div>
           </motion.div>
@@ -160,7 +175,7 @@ const Footer = () => {
           className="border-t border-[#D4BF7E]/20 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center"
         >
           <p className="text-gray-400 text-sm">
-            © 2024 Dot&Dash Agency. All rights reserved.
+            © 2023 Dot&Dash Agency. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">

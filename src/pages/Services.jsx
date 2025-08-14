@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
-import { ShoppingCart, Palette, Briefcase, Code, Smartphone, Search, ArrowRight, Award } from 'lucide-react'
+import { ShoppingCart, Palette, Briefcase, Clock, Smartphone, Search, ArrowRight, Award, Code } from 'lucide-react'
 import { Link, useLocation } from 'react-router-dom'
 
 const Services = () => {
@@ -8,23 +8,23 @@ const Services = () => {
   const serviceRefs = useRef([])
 
   useEffect(() => {
-  // Scroll to specific service if coming from home page
-  if (location.state?.scrollToService !== undefined) {
-    const serviceIndex = location.state.scrollToService;
-    const element = serviceRefs.current[serviceIndex];
+    // Scroll to specific service if coming from home page
+    if (location.state?.scrollToService !== undefined) {
+      const serviceIndex = location.state.scrollToService;
+      const element = serviceRefs.current[serviceIndex];
 
-    if (element) {
-      setTimeout(() => {
-        const navbarHeight = 150; // adjust this based on your mobile navbar height
-        const elementPosition = element.getBoundingClientRect().top + window.scrollY;
-        window.scrollTo({
-          top: elementPosition - navbarHeight,
-          behavior: 'smooth'
-        });
-      }, 500);
+      if (element) {
+        setTimeout(() => {
+          const navbarHeight = 150; // adjust this based on your mobile navbar height
+          const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+          window.scrollTo({
+            top: elementPosition - navbarHeight,
+            behavior: 'smooth'
+          });
+        }, 500);
+      }
     }
-  }
-}, [location.state]);
+  }, [location.state]);
 
 
   const mainServices = [
@@ -43,18 +43,17 @@ const Services = () => {
       color: 'from-blue-500 to-purple-600'
     },
     {
-      icon: Palette,
-      title: 'Brand Identity & Design',
-      description: 'Create memorable brand experiences that resonate with your audience and stand out in the market.',
+      icon: Clock,
+      title: 'Booking & Appointment Systems',
+      description: 'Streamline your service business with seamless online booking and appointment management solutions tailored to your workflow.',
       features: [
-        'Logo design & branding',
-        'Brand guidelines & style guides',
-        'Marketing materials',
-        'Social media assets',
-        'Print & digital design',
-        'Brand strategy consulting'
+        'Online scheduling',
+        'Reminders & notifications',
+        'Staff management',
+        'Custom forms',
+        'Client portal'
       ],
-      color: 'from-pink-500 to-rose-600'
+      color: 'from-emerald-500 to-teal-600'
     },
     {
       icon: Briefcase,
@@ -75,18 +74,18 @@ const Services = () => {
   const additionalServices = [
     {
       icon: Code,
-      title: 'Web Development',
-      description: 'Custom web applications built with modern technologies'
+      title: 'News, Blog & Content Websites',
+      description: 'Engaging platforms for publishing news, articles, and multimedia content.'
     },
     {
       icon: Smartphone,
-      title: 'Mobile App Design',
-      description: 'Native and cross-platform mobile applications'
+      title: 'Landing Pages for Digital Marketers & SaaS',
+      description: 'High-converting landing pages tailored for campaigns and SaaS products.'
     },
     {
       icon: Search,
-      title: 'SEO Optimization',
-      description: 'Improve your search engine rankings and visibility'
+      title: 'Website Redesign for Outdated Websites',
+      description: 'Modernize your online presence with a fresh, user-friendly redesign.'
     }
   ]
 
@@ -150,7 +149,7 @@ const Services = () => {
             {mainServices.map((service, index) => (
               <motion.div
                 key={index}
-                ref={(el) => (serviceRefs.current[index] = el)}
+                ref={el => (serviceRefs.current[index] = el)}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
@@ -224,6 +223,7 @@ const Services = () => {
             {additionalServices.map((service, index) => (
               <motion.div
                 key={index}
+                ref={el => (serviceRefs.current[mainServices.length + index] = el)}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}

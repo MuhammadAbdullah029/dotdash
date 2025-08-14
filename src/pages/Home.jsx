@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { ArrowRight, Star, Users, Award, TrendingUp, CheckCircle, ShoppingCart, Palette, Briefcase, Shield, Clock, Target, Quote, Globe } from 'lucide-react'
+import { ArrowRight, Star, Users, Award, TrendingUp, CheckCircle, ShoppingCart, Clock, Briefcase, Shield, Target, Quote, Globe } from 'lucide-react'
 import { Link, useNavigate } from 'react-router-dom'
 import { StaggerContainer, StaggerItem, FloatingElement } from '../components/ScrollAnimations'
 
@@ -11,10 +11,10 @@ const Home = () => {
   }
 
   const stats = [
-    { icon: Users, value: '500+', label: 'Happy Clients', description: 'Trusted by businesses worldwide' },
-    { icon: Award, value: '1000+', label: 'Projects Delivered', description: 'Successfully completed projects' },
+    { icon: Users, value: '25+', label: 'Happy Clients', description: 'Trusted by businesses worldwide' },
+    { icon: Award, value: '30+', label: 'Projects Delivered', description: 'Successfully completed projects' },
     { icon: Star, value: '4.9/5', label: 'Client Satisfaction', description: 'Average client rating' },
-    { icon: TrendingUp, value: '300%', label: 'Growth Rate', description: 'Average client business growth' }
+    { icon: TrendingUp, value: '100%', label: 'Growth Rate', description: 'Average client business growth' }
   ]
 
   const services = [
@@ -25,10 +25,14 @@ const Home = () => {
       features: ['Custom Shopping Cart', 'Payment Integration', 'Inventory Management', 'Mobile Optimization']
     },
     {
-      title: 'Brand Identity & Design',
-      description: 'Craft compelling brand stories that connect with your audience and stand out in the marketplace',
-      icon: Palette,
-      features: ['Logo Design', 'Brand Guidelines', 'Marketing Materials', 'Digital Assets']
+      title: 'Booking & Appointment Systems',
+      description: 'Streamline your service business with tailored online booking and appointment management.',
+      icon: Clock,
+      features: [
+        'Online Scheduling',
+        'Automated Reminders',
+        'Calendar Integration',
+      ]
     },
     {
       title: 'Portfolio & Corporate Sites',
@@ -63,7 +67,7 @@ const Home = () => {
     {
       icon: Shield,
       title: 'Proven Track Record',
-      description: '5+ years of delivering exceptional digital solutions'
+      description: '3+ years of delivering exceptional digital solutions'
     },
     {
       icon: Clock,
@@ -142,7 +146,7 @@ const Home = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
-                We transform ambitious ideas into powerful digital solutions. From stunning websites to comprehensive e-commerce platforms, we deliver results that exceed expectations and drive business growth.
+                Turning bold ideas into impactful digital solutions—from stunning websites to robust e-commerce platforms that drive growth.
               </motion.p>
 
               <motion.div
@@ -182,11 +186,11 @@ const Home = () => {
                 transition={{ duration: 0.8, delay: 0.8 }}
               >
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-slate-700">500+</div>
+                  <div className="text-2xl font-bold text-slate-700">30+</div>
                   <div className="text-sm text-slate-500">Happy Clients</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-emerald-600">1000+</div>
+                  <div className="text-2xl font-bold text-emerald-600">25+</div>
                   <div className="text-sm text-slate-500">Projects</div>
                 </div>
                 <div className="text-center">
@@ -293,20 +297,18 @@ const Home = () => {
                 className="text-center group h-[38vh]"
               >
                 <div className="bg-white/5 backdrop-blur-sm h-full rounded-2xl p-6 hover:scale-105 transition-all duration-300 border border-white/10">
-                  <div className={`w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg ${
-                    index === 0 ? 'bg-gradient-to-br from-blue-500 to-indigo-600' :
-                    index === 1 ? 'bg-gradient-to-br from-emerald-500 to-teal-600' :
-                    index === 2 ? 'bg-gradient-to-br from-indigo-500 to-purple-600' :
-                    'bg-gradient-to-br from-teal-500 to-cyan-600'
-                  }`}>
+                  <div className={`w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg ${index === 0 ? 'bg-gradient-to-br from-blue-500 to-indigo-600' :
+                      index === 1 ? 'bg-gradient-to-br from-emerald-500 to-teal-600' :
+                        index === 2 ? 'bg-gradient-to-br from-indigo-500 to-purple-600' :
+                          'bg-gradient-to-br from-teal-500 to-cyan-600'
+                    }`}>
                     <stat.icon size={24} className="text-white" />
                   </div>
-                  <div className={`text-3xl md:text-4xl font-bold mb-2 ${
-                    index === 0 ? 'text-blue-400' :
-                    index === 1 ? 'text-emerald-400' :
-                    index === 2 ? 'text-indigo-400' :
-                    'text-teal-400'
-                  }`}>{stat.value}</div>
+                  <div className={`text-3xl md:text-4xl font-bold mb-2 ${index === 0 ? 'text-blue-400' :
+                      index === 1 ? 'text-emerald-400' :
+                        index === 2 ? 'text-indigo-400' :
+                          'text-teal-400'
+                    }`}>{stat.value}</div>
                   <div className="text-lg font-semibold text-white mb-2">{stat.label}</div>
                   <div className="text-sm text-slate-400">{stat.description}</div>
                 </div>
@@ -347,11 +349,10 @@ const Home = () => {
                     className="glass-gradient p-8 rounded-3xl hover:shadow-2xl transition-all duration-300 h-full border border-white/20 backdrop-blur-xl group cursor-pointer"
                     onClick={() => handleServiceClick(index)}
                   >
-                    <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:shadow-xl transition-shadow duration-300 ${
-                      index === 0 ? 'bg-gradient-to-br from-blue-500 to-indigo-600' :
-                      index === 1 ? 'bg-gradient-to-br from-emerald-500 to-teal-600' :
-                      'bg-gradient-to-br from-indigo-500 to-purple-600'
-                    }`}>
+                    <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:shadow-xl transition-shadow duration-300 ${index === 0 ? 'bg-gradient-to-br from-blue-500 to-indigo-600' :
+                        index === 1 ? 'bg-gradient-to-br from-emerald-500 to-teal-600' :
+                          'bg-gradient-to-br from-indigo-500 to-purple-600'
+                      }`}>
                       <service.icon size={24} className="text-white" />
                     </div>
                     <h3 className="text-2xl font-bold text-slate-900 mb-4">{service.title}</h3>
@@ -360,11 +361,10 @@ const Home = () => {
                     <div className="space-y-3 mb-6">
                       {service.features.map((feature, featureIndex) => (
                         <div key={featureIndex} className="flex items-center space-x-3">
-                          <div className={`w-2 h-2 rounded-full flex-shrink-0 ${
-                            index === 0 ? 'bg-blue-500' :
-                            index === 1 ? 'bg-emerald-500' :
-                            'bg-indigo-500'
-                          }`}></div>
+                          <div className={`w-2 h-2 rounded-full flex-shrink-0 ${index === 0 ? 'bg-blue-500' :
+                              index === 1 ? 'bg-emerald-500' :
+                                'bg-indigo-500'
+                            }`}></div>
                           <span className="text-slate-600 text-sm">{feature}</span>
                         </div>
                       ))}
@@ -372,11 +372,10 @@ const Home = () => {
 
                     <motion.button
                       whileHover={{ scale: 1.02 }}
-                      className={`w-full text-white py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 ${
-                        index === 0 ? 'bg-gradient-to-r from-blue-600 to-indigo-600' :
-                        index === 1 ? 'bg-gradient-to-r from-emerald-600 to-teal-600' :
-                        'bg-gradient-to-r from-indigo-600 to-purple-600'
-                      }`}
+                      className={`w-full text-white py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 ${index === 0 ? 'bg-gradient-to-r from-blue-600 to-indigo-600' :
+                          index === 1 ? 'bg-gradient-to-r from-emerald-600 to-teal-600' :
+                            'bg-gradient-to-r from-indigo-600 to-purple-600'
+                        }`}
                       onClick={(e) => {
                         e.stopPropagation()
                         handleServiceClick(index)
@@ -433,7 +432,7 @@ const Home = () => {
                   "{testimonial.quote}"
                 </p>
                 <div className="flex items-center">
-                  
+
                   <div>
                     <div className="font-semibold text-white">{testimonial.name}</div>
                     <div className="text-sm text-white/70">{testimonial.role}</div>
