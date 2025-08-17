@@ -72,7 +72,7 @@ const About = () => {
               </h2>
               <div className="space-y-6 text-gray-600 leading-relaxed">
                 <p>
-                  Founded in 2023, Dot&Dash began as a small team of passionate designers and developers
+                  Founded in 2022, Dot&Dash began as a small team of passionate designers and developers
                   who believed that great design could change the world. We started with a simple mission:
                   to help businesses tell their stories through beautiful, functional digital experiences.
                 </p>

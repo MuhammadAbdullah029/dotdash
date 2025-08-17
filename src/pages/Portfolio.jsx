@@ -10,99 +10,99 @@ const Portfolio = () => {
     { id: 'ecommerce', label: 'E-commerce' },
     { id: 'branding', label: 'Branding' },
     { id: 'portfolio', label: 'Portfolio' },
-    { id: 'webapp', label: 'Web Apps' }
+    { id: 'blog', label: 'Blog' }
   ]
 
   const projects = [
     {
       id: 1,
-      title: 'Luxury Fashion Store',
-      category: 'ecommerce',
-      description: 'A high-end fashion e-commerce platform with advanced filtering and seamless checkout.',
-      image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&h=400&fit=crop',
-      tags: ['React', 'Node.js', 'Stripe', 'MongoDB'],
-      liveUrl: '#',
-      githubUrl: '#'
+      title: 'Photographer Portfolio',
+      category: 'portfolio',
+      description: 'minimalist portfolio website for a professional photographer with gallery features.',
+      image: '/Portfolio/Portfolio.png',
+      tags: ['React', 'TailwindCSS'],
+      liveUrl: 'https://muhammadabdullah029.github.io/RichardRyan/',
+      githubUrl: 'https://github.com/MuhammadAbdullah029/RichardRyan'
     },
     {
       id: 2,
-      title: 'Creative Agency Rebrand',
+      title: 'Redix',
       category: 'branding',
-      description: 'Complete brand identity redesign for a creative agency including logo, guidelines, and assets.',
-      image: 'https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=600&h=400&fit=crop',
-      tags: ['Brand Design', 'Logo', 'Guidelines', 'Print'],
-      liveUrl: '#',
-      githubUrl: '#'
+      description: 'Ridex. Search for cheap rental cars',
+      image: '/Portfolio/redix.png',
+      tags: ['Brand Design', 'Logo', 'Guidelines'],
+      liveUrl: 'https://muhammadabdullah029.github.io/redix/',
+      githubUrl: 'https://github.com/MuhammadAbdullah029/redix'
     },
     {
       id: 3,
-      title: 'Artist Portfolio Website',
-      category: 'portfolio',
-      description: 'A stunning portfolio website for a contemporary artist showcasing their work.',
-      image: 'https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=600&h=400&fit=crop',
+      title: 'Anon Ecommerce Website',
+      category: 'ecommerce',
+      description: 'A modern e-commerce platform for anonymous products with a sleek design and user-friendly interface.',
+      image: '/Portfolio/anon.png',
       tags: ['React', 'Framer Motion', 'Tailwind', 'CMS'],
-      liveUrl: '#',
-      githubUrl: '#'
+      liveUrl: 'https://muhammadabdullah029.github.io/anon/',
+      githubUrl: 'https://github.com/MuhammadAbdullah029/anon'
     },
     {
       id: 4,
-      title: 'Tech Startup Dashboard',
-      category: 'webapp',
-      description: 'A comprehensive analytics dashboard for a tech startup with real-time data visualization.',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop',
-      tags: ['Vue.js', 'D3.js', 'Python', 'PostgreSQL'],
-      liveUrl: '#',
-      githubUrl: '#'
+      title: 'Blogy',
+      category: 'blog',
+      description: 'A modern blogging platform with a clean design and user-friendly interface.',
+      image: '/Portfolio/blogy.png',
+      tags: ['React.js', 'Tailwind CSS'],
+      liveUrl: 'https://muhammadabdullah029.github.io/blogy/',
+      githubUrl: 'https://github.com/MuhammadAbdullah029/blogy'
     },
     {
       id: 5,
-      title: 'Organic Food Store',
+      title: 'Casmart E-commerce',
       category: 'ecommerce',
-      description: 'An eco-friendly e-commerce platform for organic food products with subscription features.',
-      image: 'https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&h=400&fit=crop',
-      tags: ['Shopify', 'React', 'Subscription', 'Payment'],
-      liveUrl: '#',
-      githubUrl: '#'
+      description: 'Casmart is a modern e-commerce platform for smart home devices with a sleek design and user-friendly interface.',
+      image: '/Portfolio/casmart.png',
+      tags: ['React', 'Tailwind CSS', 'Stripe'],
+      liveUrl: 'https://muhammadabdullah029.github.io/casmart/',
+      githubUrl: 'https://github.com/MuhammadAbdullah029/casmart'
     },
     {
       id: 6,
-      title: 'Restaurant Brand Identity',
+      title: 'Das Grüne Agency',
       category: 'branding',
-      description: 'Modern brand identity for a fine dining restaurant including menu design and signage.',
-      image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&h=400&fit=crop',
-      tags: ['Brand Design', 'Menu Design', 'Signage'],
-      liveUrl: '#',
-      githubUrl: '#'
+      description: 'A branding project Das Grüne, A Digital Agency.',
+      image: '/Portfolio/DasGrune.webp',
+      tags: ['Brand Design', 'React', 'GSAP'],
+      liveUrl: 'https://das-grune-kmc4081zb-muhammad-abdullahs-projects-fd44b5c2.vercel.app/',
+      githubUrl: 'https://github.com/MuhammadAbdullah029/Das-Grune'
     },
     {
       id: 7,
-      title: 'Photographer Portfolio',
-      category: 'portfolio',
-      description: 'A minimalist portfolio website for a professional photographer with gallery features.',
-      image: 'https://images.unsplash.com/photo-1452587925148-ce544e77e70d?w=600&h=400&fit=crop',
-      tags: ['Next.js', 'Lightbox', 'Gallery', 'SEO'],
-      liveUrl: '#',
-      githubUrl: '#'
+      title: 'Tickr',
+      category: 'ecommerce',
+      description: 'A modern e-commerce platform for digital products with a focus on user experience and performance.',
+      image: '/Portfolio/Tickr.png',
+      tags: ['HTML', 'CSS', 'JS', 'SEO'],
+      liveUrl: 'https://muhammadabdullah029.github.io/tickr/',
+      githubUrl: 'https://github.com/MuhammadAbdullah029/tickr'
     },
     {
       id: 8,
-      title: 'Project Management Tool',
-      category: 'webapp',
-      description: 'A collaborative project management tool with team features and real-time updates.',
-      image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop',
-      tags: ['React', 'Socket.io', 'Node.js', 'MongoDB'],
-      liveUrl: '#',
-      githubUrl: '#'
+      title: 'Travel Agency',
+      category: 'branding',
+      description: 'A travel agency project.',
+      image: '/Portfolio/Travel.png',
+      tags: ['HTML', 'CSS', 'JS', 'SEO'],
+      liveUrl: 'https://muhammadabdullah029.github.io/travel/',
+      githubUrl: 'https://github.com/MuhammadAbdullah029/travel'
     },
     {
       id: 9,
-      title: 'Jewelry E-commerce',
-      category: 'ecommerce',
-      description: 'Elegant e-commerce platform for luxury jewelry with 360° product views.',
-      image: 'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=600&h=400&fit=crop',
-      tags: ['React', 'Three.js', 'Stripe', 'CMS'],
-      liveUrl: '#',
-      githubUrl: '#'
+      title: 'vCard Portfolio',
+      category: 'portfolio',
+      description: 'A Portfolio website',
+      image: '/Portfolio/portfolio.png',
+      tags: ['HTML', 'CSS', 'JS'],
+      liveUrl: 'https://muhammadabdullah029.github.io/vCard/',
+      githubUrl: 'https://github.com/MuhammadAbdullah029/vCard'
     }
   ]
 

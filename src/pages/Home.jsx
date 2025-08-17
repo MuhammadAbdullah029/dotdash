@@ -46,7 +46,7 @@ const Home = () => {
     {
       name: 'Sarah Johnson',
       role: 'CEO, TechStart Inc.',
-      quote: 'DOt&Dash transformed our online presence completely. Our sales increased by 300% within the first quarter.',
+      quote: 'Dot&Dash transformed our online presence completely. Our sales increased by 300% within the first quarter.',
       rating: 5
     },
     {
@@ -58,7 +58,7 @@ const Home = () => {
     {
       name: 'Emily Rodriguez',
       role: 'Marketing Director, Fashion Brand',
-      quote: 'Working with DOt&Dash was a game-changer. They understood our vision and brought it to life perfectly.',
+      quote: 'Working with Dot&Dash was a game-changer. They understood our vision and brought it to life perfectly.',
       rating: 5
     }
   ]
