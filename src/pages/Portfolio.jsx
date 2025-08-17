@@ -14,97 +14,97 @@ const Portfolio = () => {
   ]
 
   const projects = [
-    {
-      id: 1,
-      title: 'Photographer Portfolio',
-      category: 'portfolio',
-      description: 'minimalist portfolio website for a professional photographer with gallery features.',
-      image: '/Portfolio/Portfolio.png',
-      tags: ['React', 'TailwindCSS'],
-      liveUrl: 'https://muhammadabdullah029.github.io/RichardRyan/',
-      githubUrl: 'https://github.com/MuhammadAbdullah029/RichardRyan'
-    },
-    {
-      id: 2,
-      title: 'Redix',
-      category: 'branding',
-      description: 'Ridex. Search for cheap rental cars',
-      image: '/Portfolio/redix.png',
-      tags: ['Brand Design', 'Logo', 'Guidelines'],
-      liveUrl: 'https://muhammadabdullah029.github.io/redix/',
-      githubUrl: 'https://github.com/MuhammadAbdullah029/redix'
-    },
-    {
-      id: 3,
-      title: 'Anon Ecommerce Website',
-      category: 'ecommerce',
-      description: 'A modern e-commerce platform for anonymous products with a sleek design and user-friendly interface.',
-      image: '/Portfolio/anon.png',
-      tags: ['React', 'Framer Motion', 'Tailwind', 'CMS'],
-      liveUrl: 'https://muhammadabdullah029.github.io/anon/',
-      githubUrl: 'https://github.com/MuhammadAbdullah029/anon'
-    },
-    {
-      id: 4,
-      title: 'Blogy',
-      category: 'blog',
-      description: 'A modern blogging platform with a clean design and user-friendly interface.',
-      image: '/Portfolio/blogy.png',
-      tags: ['React.js', 'Tailwind CSS'],
-      liveUrl: 'https://muhammadabdullah029.github.io/blogy/',
-      githubUrl: 'https://github.com/MuhammadAbdullah029/blogy'
-    },
-    {
-      id: 5,
-      title: 'Casmart E-commerce',
-      category: 'ecommerce',
-      description: 'Casmart is a modern e-commerce platform for smart home devices with a sleek design and user-friendly interface.',
-      image: '/Portfolio/casmart.png',
-      tags: ['React', 'Tailwind CSS', 'Stripe'],
-      liveUrl: 'https://muhammadabdullah029.github.io/casmart/',
-      githubUrl: 'https://github.com/MuhammadAbdullah029/casmart'
-    },
-    {
-      id: 6,
-      title: 'Das Grüne Agency',
-      category: 'branding',
-      description: 'A branding project Das Grüne, A Digital Agency.',
-      image: '/Portfolio/DasGrune.webp',
-      tags: ['Brand Design', 'React', 'GSAP'],
-      liveUrl: 'https://das-grune-kmc4081zb-muhammad-abdullahs-projects-fd44b5c2.vercel.app/',
-      githubUrl: 'https://github.com/MuhammadAbdullah029/Das-Grune'
-    },
-    {
-      id: 7,
-      title: 'Tickr',
-      category: 'ecommerce',
-      description: 'A modern e-commerce platform for digital products with a focus on user experience and performance.',
-      image: '/Portfolio/Tickr.png',
-      tags: ['HTML', 'CSS', 'JS', 'SEO'],
-      liveUrl: 'https://muhammadabdullah029.github.io/tickr/',
-      githubUrl: 'https://github.com/MuhammadAbdullah029/tickr'
-    },
-    {
-      id: 8,
-      title: 'Travel Agency',
-      category: 'branding',
-      description: 'A travel agency project.',
-      image: '/Portfolio/Travel.png',
-      tags: ['HTML', 'CSS', 'JS', 'SEO'],
-      liveUrl: 'https://muhammadabdullah029.github.io/travel/',
-      githubUrl: 'https://github.com/MuhammadAbdullah029/travel'
-    },
-    {
-      id: 9,
-      title: 'vCard Portfolio',
-      category: 'portfolio',
-      description: 'A Portfolio website',
-      image: '/Portfolio/portfolio.png',
-      tags: ['HTML', 'CSS', 'JS'],
-      liveUrl: 'https://muhammadabdullah029.github.io/vCard/',
-      githubUrl: 'https://github.com/MuhammadAbdullah029/vCard'
-    }
-  ]
+  {
+    id: 1,
+    title: 'Photographer Portfolio',
+    category: 'portfolio',
+    description: 'A minimalist and elegant portfolio website for a professional photographer, featuring a dynamic gallery and seamless user experience.',
+    image: '/Portfolio/Portfolio.png',
+    tags: ['React', 'TailwindCSS'],
+    liveUrl: 'https://muhammadabdullah029.github.io/RichardRyan/',
+    githubUrl: 'https://github.com/MuhammadAbdullah029/RichardRyan'
+  },
+  {
+    id: 2,
+    title: 'Redix',
+    category: 'branding',
+    description: 'A modern brand identity and web presence for Ridex, a platform to search and book affordable rental cars with ease.',
+    image: '/Portfolio/redix.png',
+    tags: ['Brand Design', 'Logo', 'Guidelines'],
+    liveUrl: 'https://muhammadabdullah029.github.io/redix/',
+    githubUrl: 'https://github.com/MuhammadAbdullah029/redix'
+  },
+  {
+    id: 3,
+    title: 'Anon Ecommerce Website',
+    category: 'ecommerce',
+    description: 'A sleek and secure e-commerce platform for anonymous products, offering a modern design and intuitive shopping experience.',
+    image: '/Portfolio/anon.png',
+    tags: ['React', 'Framer Motion', 'Tailwind', 'CMS'],
+    liveUrl: 'https://muhammadabdullah029.github.io/anon/',
+    githubUrl: 'https://github.com/MuhammadAbdullah029/anon'
+  },
+  {
+    id: 4,
+    title: 'Blogy',
+    category: 'blog',
+    description: 'A clean and modern blogging platform designed for content creators, with a focus on readability and user engagement.',
+    image: '/Portfolio/blogy.png',
+    tags: ['React.js', 'Tailwind CSS'],
+    liveUrl: 'https://muhammadabdullah029.github.io/blogy/',
+    githubUrl: 'https://github.com/MuhammadAbdullah029/blogy'
+  },
+  {
+    id: 5,
+    title: 'Casmart E-commerce',
+    category: 'ecommerce',
+    description: 'A cutting-edge e-commerce site for smart home devices, featuring a stylish interface and smooth shopping journey.',
+    image: '/Portfolio/casmart.png',
+    tags: ['React', 'Tailwind CSS', 'Stripe'],
+    liveUrl: 'https://muhammadabdullah029.github.io/casmart/',
+    githubUrl: 'https://github.com/MuhammadAbdullah029/casmart'
+  },
+  {
+    id: 6,
+    title: 'Das Grüne Agency',
+    category: 'branding',
+    description: 'A vibrant branding project for Das Grüne, a digital agency, showcasing creative design and interactive web elements.',
+    image: '/Portfolio/DasGrune.webp',
+    tags: ['Brand Design', 'React', 'GSAP'],
+    liveUrl: 'https://das-grune-kmc4081zb-muhammad-abdullahs-projects-fd44b5c2.vercel.app/',
+    githubUrl: 'https://github.com/MuhammadAbdullah029/Das-Grune'
+  },
+  {
+    id: 7,
+    title: 'Tickr',
+    category: 'ecommerce',
+    description: 'A high-performance e-commerce platform for digital products, optimized for speed, SEO, and user experience.',
+    image: '/Portfolio/Tickr.png',
+    tags: ['HTML', 'CSS', 'JS', 'SEO'],
+    liveUrl: 'https://muhammadabdullah029.github.io/tickr/',
+    githubUrl: 'https://github.com/MuhammadAbdullah029/tickr'
+  },
+  {
+    id: 8,
+    title: 'Travel Agency',
+    category: 'branding',
+    description: 'A visually appealing website for a travel agency, designed to inspire adventure and simplify trip planning.',
+    image: '/Portfolio/Travel.png',
+    tags: ['HTML', 'CSS', 'JS', 'SEO'],
+    liveUrl: 'https://muhammadabdullah029.github.io/travel/',
+    githubUrl: 'https://github.com/MuhammadAbdullah029/travel'
+  },
+  {
+    id: 9,
+    title: 'vCard Portfolio',
+    category: 'portfolio',
+    description: 'A stylish and responsive portfolio website to showcase personal projects and professional skills.',
+    image: '/Portfolio/portfolio.png',
+    tags: ['HTML', 'CSS', 'JS'],
+    liveUrl: 'https://muhammadabdullah029.github.io/vCard/',
+    githubUrl: 'https://github.com/MuhammadAbdullah029/vCard'
+  }
+]
 
   const filteredProjects = activeFilter === 'all' 
     ? projects 
